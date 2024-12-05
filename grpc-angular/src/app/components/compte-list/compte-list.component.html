@@ -1,0 +1,25 @@
+<div *ngIf="comptes.length > 0">
+    <h2>Comptes List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Solde</th>
+          <th>Date Creation</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let compte of comptes">
+          <td>{{ compte.getId() }}</td>
+          <td>{{ compte.getSolde() }}</td>
+          <td>{{ compte.getDateCreation() }}</td>
+          <td>{{ compte.getType() }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="comptes.length === 0">
+    <p>No comptes found.</p>
+  </div>
+  
